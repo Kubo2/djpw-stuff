@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* ikonka pred odkazom na známy web */
+a.do-webu > u:first-child {
+  display: none;
+}
+
+/* nepoužiteľný šedivý button "Upraviť príspevok" po expirácii možnosti editácie */
+.postinfo.right span.help[title^="Příspěvek smíte upravovat"] {
+  display: none;
+}
+
