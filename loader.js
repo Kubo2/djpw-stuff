@@ -7,9 +7,13 @@ writeStyle('djpw-purified');
 
 function formatHtml(name, type) {
   type = type.toLowerCase();
+  function getUrl() {
+    return 'https://rawgit.com/Kubo2/djpw-stuff/master/' + name + '.' + type;
+  }
+  
   switch(type) {
-    case 'js': return '<script src="https://raw.githubusercontent.com/Kubo2/djpw-stuff/master/' + name + '.' + type + '"></script>';
-    case 'css': return '<style>@import "https://raw.githubusercontent.com/Kubo2/djpw-stuff/master/' + name + '.' + type + '";</style>';
+    case 'js': return '<script src="' + getUrl() + '"></script>';
+    case 'css': return '<style>@import "' + getUrl() + '";</style>';
     default: throw new TypeError();
   }
 }
