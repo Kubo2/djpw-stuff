@@ -10,3 +10,7 @@ a.do-webu > u:first-child {
   display: none;
 }
 
+/* rozbité ikonky vo výpise vlákien */
+.list tr td:first-child {
+  display: none;
+}
