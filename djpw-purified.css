@@ -11,6 +11,6 @@ a.do-webu > u:first-child {
 }
 
 /* rozbité ikonky vo výpise vlákien */
-.list tr td:first-child {
+.list tr td:first-child > a.ico {
   display: none;
 }
