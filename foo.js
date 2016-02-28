@@ -4,7 +4,7 @@
  * to <kbd>Tab</kbd> be first focusing on the #nahled-tlacitko
  */
 inits.push(function() {
-	var tmp, nahledTlactiko = document.getElementById('nahled-tlacitko'),
+	var tmp, nahledTlacitko = document.getElementById('nahled-tlacitko'),
 		submitBtn = document.getElementById('submitbtn');
 	
 	if(nahledTlacitko && submitBtn) {
