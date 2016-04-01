@@ -12,7 +12,7 @@ window.Kubo2 = window.Kubo2 || {};
 		}
 
 		switch(type) {
-			case 'js': return '<script src="' + getUrl() + '"></script>';
+			case 'js': return '<script src="' + getUrl() + '" charset="utf-8"></script>';
 			case 'css': return '<style>@import "' + getUrl() + '";</style>';
 			default: throw new TypeError();
 		}

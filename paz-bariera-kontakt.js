@@ -1,5 +1,5 @@
 /**
- * Vylep¹enie protivy»ahovacej zábrany v kategórii Práce a zakázky o kontaktné tlaèítko.
+ * VylepÅ¡enie protivyÅ¥ahovacej zÃ¡brany v kategÃ³rii â€PrÃ¡ce a zakÃ¡zkyâ€œ o kontaktnÃ© tlaÄÃ­tko.
  */
 inits.push((function(protivytahovaciZabrana) {
 	var originalZabrana = protivytahovaciZabrana;
@@ -33,16 +33,11 @@ inits.push((function(protivytahovaciZabrana) {
 			return originalZabrana(param);
 		}
 
-		var zabrana = {};
-		zabrana.nadpis = "Úèelem této diskusní kategorie je zprostøedkování prvního kontaktu mezi lidmi, kteøí shánìjí èi nabízejí práci.";
-
-		if(param.qsmoderator) { // for TESTING!!! in production replace with param.moderator
-			zabrana.text = "Kliknìte na tlaèítko &bdquo;Odpovìdìt na inzerát&ldquo; pro pøíme kontaktovaní inzerenta.";
-		} else {
-			zabrana.text = "Zaujal-li vás inzerát, vyu¾ijte uvedenı kontakt nebo kliknìte na &bdquo;Odpovìdìt na inzerát&ldquo;, <b>nepi¹te</b> do diskuse. I pokud vás na inzerátu nìco zarazilo, pobavilo èi rozèílilo, není ¾ádoucí to sem psát.";
-		}
-
-
+		var zabrana = {
+			nadpis: "ÃšÄelem tÃ©to diskusnÃ­ kategorie je zprostÅ™edkovÃ¡nÃ­ prvnÃ­ho kontaktu mezi lidmi, kteÅ™Ã­ shÃ¡nÄ›jÃ­ Äi nabÃ­zejÃ­ prÃ¡ci.",
+			text: "Zaujal-li vÃ¡s inzerÃ¡t, vyuÅ¾ijte uvedenÃ½ kontakt nebo kliknÄ›te na â€OdpovÄ›dÄ›t na inzerÃ¡tâ€œ, <b>nepiÅ¡te</b> do diskuse. \
+				I pokud vÃ¡s na inzerÃ¡tu nÄ›co zarazilo, pobavilo Äi rozÄÃ­lilo, nenÃ­ Å¾Ã¡doucÃ­ to sem psÃ¡t."
+		};
 
 		var f = document.postMsg;
 		if(!f) return false;
@@ -53,10 +48,10 @@ inits.push((function(protivytahovaciZabrana) {
 		</div>\
 		<p style=\"margin: 4px 0\">" + zabrana.text + "\
 		<div class=\"center\">\
-			<button type=button id=contactDirectlyButton style='margin: 0 0 4px'>Odpovìdìt na inzerát</button>\
-			<br>(Kliknutím vyu¾ijete první uvedenı kontakt ke kontaktovaní inzerenta.)<br>\
-			<button type=\"button\" id=\"postMsgButton\" style=\"margin: 0 0 4px\">Chci psát zprávu</button>\
-			<br>Bìda vám, jestli to bude blábol.\
+			<button type=button id=contactDirectlyButton style='margin: 0 0 4px'>OdpovÄ›dÄ›t na inzerÃ¡t</button>\
+			<br>(KliknutÃ­m vyuÅ¾ijete prvnÃ­ uvedenÃ½ kontakt ke <span class=help title='na kontakt uvedenÃ½ v inzerÃ¡tu'>pÅ™Ã­mÃ©mu</span> kontaktovÃ¡nÃ­ inzerenta.)<br>\
+			<button type=\"button\" id=\"postMsgButton\" style=\"margin: 0 0 4px\">Chci psÃ¡t zprÃ¡vu</button>\
+			<br>BÄ›da vÃ¡m, jestli to bude blÃ¡bol.\
 		</div>";
 
 		f.style.display = "none";
