@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ikonka pred odkazom na známy web */
-a.do-webu > u:first-child {
+a.do-webu > u:first-child, a.do-jpw:before {
   display: none;
 }
 
