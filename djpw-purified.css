@@ -9,8 +9,3 @@ a.do-webu > u:first-child {
 .postinfo.right span.help[title^="Příspěvek smíte upravovat"] {
   display: none;
 }
-
-/* rozbité ikonky vo výpise vlákien */
-.list tr td:first-child > a.ico {
-  display: none;
-}
